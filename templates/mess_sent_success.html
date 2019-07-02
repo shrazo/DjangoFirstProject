@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %} Message sent successfully !! {% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
+<li class="breadcrumb-item">Message sent</li>
+{% endblock %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    Message sent successfully !!
+</div>
+{% endblock %}

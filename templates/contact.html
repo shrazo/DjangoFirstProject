@@ -2,12 +2,11 @@
 
 {% load widget_tweaks %}
 
-{% block title %} Start a new Topic {% endblock %}
+{% block title %} Write to us {% endblock %}
 
 {% block breadcrumb %}
 <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
-<li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
-<li class="breadcrumb-item active">New Topic</li>
+<li class="breadcrumb-item active">Contact</li>
 {% endblock %}
 
 {% block content %}
@@ -24,6 +23,6 @@
 		{% endif %}
 	</div>
 	{% endfor %}
-	<button type="submit" class="btn btn-success">Post</button>
+	<button type="submit" class="btn btn-success">Send</button>
 </form>
 {% endblock %}
