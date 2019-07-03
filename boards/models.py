@@ -47,3 +47,23 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.full_name + ' : ' + self.message[:75]
+
+
+class Student(models.Model):
+    std_id = models.CharField(max_length=7, unique=True)
+    name = models.CharField(max_length=200)
+    attendance = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    ct1 = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    ct2 = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    ct3 = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    ct4 = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    ct = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    secA = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    secB = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    final300 = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    final100 = models.DecimalField(default=0.0, decimal_places=2, max_digits=5)
+    gpa = models.DecimalField(decimal_places=2, max_digits=5)
+    grade = models.CharField(max_length=2)
+
+    def __str__(self):
+        return self.name+'('+self.std_id+')'
