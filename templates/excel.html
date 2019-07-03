@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h2 class="center">Department of EEE</h2>
+        </div>
+        <table class="table table-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Std. ID</th>
+                    <th>Name</th>
+                    <th>Attendance (30)</th>
+                    <th>CT1</th>
+                    <th>CT2</th>
+                    <th>CT3</th>
+                    <th>CT4</th>
+                    <th>CT (60)</th>
+                    <th>Section A(105)</th>
+                    <th>Section B(105)</th>
+                    <th>Final (300)</th>
+                    <th>Final (100 %)</th>
+                    <th>Grade</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in N %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td></td>
+                    <td><input class="form-control input-sm" type="text" name="stdid" id="stdid"></td>
+                    <td><input class="form-control input-sm" type="text" name="attn" id="attn"></td>
+                    <td> <input class="form-control input-sm" type="text" columns=5 name="ct1" id="ct1"></td>
+                    <td> <input class="form-control input-sm" type="text" columns=5 name="ct2" id="ct2"></td>
+                    <td><input class="form-control input-sm" type="text" columns=5 name="ct3" id="ct3"></td>
+                    <td> <input class="form-control input-sm" type="text" columns=5 name="ct4" id="ct4"></td>
+                    <td></td>
+                    <td><input class="form-control input-sm" type="text" name="secA" id="secA"></td>
+                    <td><input class="form-control input-sm" type="text" name="secB" id="secB"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
