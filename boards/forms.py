@@ -30,4 +30,4 @@ class ContactForm(forms.ModelForm):
     widget=forms.Textarea(attrs={'placeholder':'Phone Number'}),
     help_text='e.g. +8801737520527'
     )
-    message = forms.forms.TextInput(attrs={'size': 10, 'title': 'Your name'})
+    message = forms.TextInput(attrs={'size': 10, 'title': 'Your name'})
